@@ -1,0 +1,16 @@
+---
+ - name: Update all packages on dev   servers
+   hosts: dev
+   gather_facts: yes
+   tasks: 
+     - name: Update all packages on ubuntu
+       when: ansible_facts['distribution'] == "Ubuntu"
+       apt:
+         name: '*'
+         state: latest
+       
+     - name: Update all packages on centos
+       when: ansible_facts['distribution'] == "CentOS"       
+       yum:
+         name: '*'
+         state: latest  

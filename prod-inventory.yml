@@ -1,0 +1,11 @@
+---
+all:
+  hosts:
+
+  children:
+    prod:
+      hosts:
+        ubuntu:
+          ansible_host: 159.203.108.176
+        centos:
+          ansible_host: 157.230.93.246 

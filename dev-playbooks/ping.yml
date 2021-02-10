@@ -1,0 +1,7 @@
+---
+  - name: Ping Hosts
+    hosts: dev
+    tasks:
+      - name: Ping Hosts
+        ping:
+        when: "'dev' in group_names"

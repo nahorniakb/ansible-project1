@@ -1,0 +1,17 @@
+---
+ - name: Update all packages on prod   servers
+   hosts: prod
+   tasks: 
+     - name: Update all packages on ubuntu
+       apt:
+         name: '*'
+         state: latest
+       when:
+         - ansible_facts['distribution'] == "Ubuntu"  
+
+     - name: Update all packages on centos
+       yum:
+         name: '*'
+         state: latest
+       when:
+         - ansible_facts['distribution'] == "CentOS"  
