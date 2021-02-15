@@ -1,0 +1,12 @@
+---
+  - name: Start and Restart Apache
+    hosts: dev
+    gather_facts: yes
+    tasks:
+      - name: Start and enabled Apache
+        when:
+          - ansible_facts['distribution'] == "CentOS"
+        systemd:
+          name: httpd
+          state: started
+          enabled: yes

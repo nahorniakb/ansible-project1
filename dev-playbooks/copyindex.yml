@@ -1,0 +1,10 @@
+---
+  - name: Copy Index.html to a CentOS server
+    hosts: dev
+    gather_facts: yes
+    tasks:
+      - name: Copy Index.html
+        when: ansible_facts['distribution'] == "CentOS"
+        copy:
+          src: index.html
+          dest: /var/www/html
