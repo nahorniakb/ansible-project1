@@ -1,4 +1,4 @@
 # Ignore Inventory Files
 
 *-inventory.yml
-*-inventory.yml
+*-inventory.*

@@ -1,17 +1,22 @@
+# Ansible Project1
+
+The purpose of this project is write conditional playbooks to manage multiple hosts with Ansible. 
+
 ## Prerequisites
 
-For project we needs some prerequisites stuff.
 * Ubuntu Server
 * CentOS
 * SSH Connection established with Ansible-Server
 
 ## Usage
 
- 
-## Contributing
+ [dev-playbooks](dev-playbooks) : Contains playbooks for dev server.
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+ [prod-playbooks](prod-playbooks) : Contains playbooks for prod server.
 
-Please make sure to update tests as appropriate.
+
+ ## Contributing
+
+
 
 ## Addional Notes
