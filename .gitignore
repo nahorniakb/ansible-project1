@@ -2,3 +2,10 @@
 
 *-inventory.yml
 *-inventory.*
+dev-inventory*
+prod-inventory*
+
+# Error files
+
+*error*
+error*.json

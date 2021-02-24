@@ -1,0 +1,5 @@
+playbook_name: "Testing variable file"
+servers: "all"
+facts: no
+test_message: "Hello From test.yml"
+custom_command: "pwd"
