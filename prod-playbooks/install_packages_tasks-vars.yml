@@ -1,0 +1,10 @@
+# TO add packages on Ubuntu
+ubuntu_packages:
+  - vim
+  - curl
+  - wget
+
+# TO add packages on CentOS 
+centos_packages:
+  - tree
+  - wget

@@ -1,0 +1,19 @@
+---
+ - name: "{{ play_name }}"
+   hosts: "{{ servers }}"
+   vars_files:
+     - "install_packages_play-vars.yml"
+     - "install_packages_tasks-vars.yml"
+   gather_facts: "{{ facts }}"  
+   tasks: 
+     - name: Install vim, curl, wget, git, tree  
+       apt:
+         name: "{{ ubuntu_packages }}"
+         state: latest
+       when: ansible_facts['distribution'] == "Ubuntu"  
+
+     - name: Install vim,curl,wget,git,tree on centos
+       yum:
+         name: "{{ centos_packages }}"
+         state: latest
+       when: ansible_facts['distribution'] == "CentOS"

@@ -1,0 +1,13 @@
+---
+  - name: Ping Hosts
+    hosts: all
+    gather_facts: "facts"
+    vars:
+      facts: "yes"
+    tasks:
+      - name: Ping Hosts
+        ping:
+      
+      - name: Print Variable
+        debug:
+          msg: "{{ facts }}"  
